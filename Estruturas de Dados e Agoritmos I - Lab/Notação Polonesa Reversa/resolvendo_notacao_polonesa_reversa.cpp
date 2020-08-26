@@ -18,7 +18,6 @@ bool isfull(stack *s)
 	return(aux);
 }
 
-
 bool empty(stack *s)
 {
 	bool aux;
@@ -75,6 +74,7 @@ float calculaExpressao(char *p, int tam){
 	
 	//declarando a nossa pilha de float
 	stack *pilha;
+	
 	//inicializando o top como -1 para dizer que está vazia
 	pilha->top = -1;
 	
@@ -89,10 +89,12 @@ float calculaExpressao(char *p, int tam){
 			
 			//armazenando o float na pilha
 			push(aux1,pilha);
-		}
+			
+		}//if para identificar os numeros na notacao
 		
 		else if( *(p+i) == '+'){
 			
+			//retira os dois ultimos numeros e realiza a operacao
 			aux2 = pop(pilha);
 			aux1 = pop(pilha);
 			
