@@ -140,6 +140,7 @@ void aloca_no(no **p){
 	
 }
 
+//recursividade
 void insert_tree(no **p, int num){
 	
 	if( (*p) == NULL )
@@ -171,6 +172,7 @@ bool find_number_tree(int num, no *p){
 	
 }
 
+//recursividade
 int profundidade_tree(no *p){
 	
 	//profundidade da esquerda
@@ -186,6 +188,7 @@ int profundidade_tree(no *p){
 	else{
 		//calcular a profundidade da esquerda
 		prof_left = profundidade_tree(p->left);
+		//calcular a profundidade da direita
 		prof_right = profundidade_tree(p->right);
 		
 		if(prof_left > prof_right){
@@ -198,6 +201,7 @@ int profundidade_tree(no *p){
 	
 }
 
+//recursividade
 int soma_folhas(no *p){
 	
 	int folhas_direita;
